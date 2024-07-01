@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Places - Tribute to Queen Elizabeth II</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwright+FR+Trad:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .timeline-item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .timeline-item.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .social-icons a {
+        display: block;
+        font-size: 24px;
+        margin: 0 10px;
+        color: #333;
+      }
+
+      .social-icons a:hover {
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Queen Elizabeth</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="slideshow.html">Slideshow</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+
+    <section class="timeline">
+      <div class="container">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h2>1952</h2>
+            <p>Queen Elizabeth II ascends to the throne.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h2>1953</h2>
+            <p>Coronation ceremony held at Westminster Abbey.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h2>1977</h2>
+            <p>Queen's Silver Jubilee celebrated across the UK.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h2>1981</h2>
+            <p>Prince Charles marries Lady Diana Spencer.</p>
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h2>2012</h2>
+            <p>Diamond Jubilee marks 60 years of Queen's reign.</p>
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h2>2022</h2>
+            <p>
+              Queen Elizabeth II becomes the longest-reigning British monarch.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="social-icons">
+      <a class="facebook" href="https://facebook.com"
+        ><i class="fab fa-facebook"></i
+      ></a>
+      <a class="twitter" href="https://twitter.com"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a class="instagram" href="https://instagram.com"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a class="pinterest" href="https://pinterest.com"
+        ><i class="fab fa-pinterest"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Tribute to Queen Elizabeth II. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const timelineItems = document.querySelectorAll('.timeline-item')
+
+      function showTimelineItems() {
+        timelineItems.forEach((item, index) => {
+          if (isElementInViewport(item)) {
+            item.classList.add('show')
+          }
+        })
+      }
+
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect()
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        )
+      }
+
+      document.addEventListener('DOMContentLoaded', showTimelineItems)
+
+      document.addEventListener('scroll', showTimelineItems)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery - Tribute to Queen Elizabeth II</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwright+FR+Trad:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>Queen Elizabeth</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="slideshow.html">Slideshow</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+
+    <div class="gallery">
+      <div class="gallery-item">
+        <img
+          src="img/376446da6e7bb21389e4dd3d400f4ba0.jpg"
+          alt="Coronation Ceremony"
+          onclick="openModal(this.src, 0)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/nu.jpg"
+          alt="State Visit"
+          onclick="openModal(this.src, 1)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/trippy.webp"
+          alt="Royal Wedding"
+          onclick="openModal(this.src, 2)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/Elizabeth-and-her-children-elizabeth-taylor-20641406-396-521.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 3)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/e6.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 4)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/Queen-Elizabeth.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 5)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/wed.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 6)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/6a04426143280ec1daec3f6abb45d672.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 7)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/queen-elizabeth-ii_99.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 8)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/Their-Gan-Gan-.webp"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 9)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/tumblr_m0kwccTqe61qgz8jvo1_500.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 10)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/mw65844.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 11)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/HM_Queen_Elizabeth_II.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 12)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/939f39ab242b80bf90320d8edd49f422.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 13)"
+        />
+      </div>
+      <div class="gallery-item">
+        <img
+          src="img/Royal Asscher Cut_Queen Elizabeth.jpg"
+          alt="Silver Jubilee"
+          onclick="openModal(this.src, 14)"
+        />
+      </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modal-img" />
+      <a class="prev" onclick="event.stopPropagation(); changeImage(-1)"
+        >&#10094;</a
+      >
+      <a class="next" onclick="event.stopPropagation(); changeImage(1)"
+        >&#10095;</a
+      >
+    </div>
+
+    <div class="social-icons">
+      <a class="facebook" href="https://facebook.com"
+        ><i class="fa fa-facebook"></i
+      ></a>
+      <a class="twitter" href="https://twitter.com"
+        ><i class="fa fa-twitter"></i
+      ></a>
+      <a class="instagram" href="https://instagram.com"
+        ><i class="fa fa-instagram"></i
+      ></a>
+      <a class="pinterest" href="https://pinterest.com"
+        ><i class="fa fa-pinterest"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Tribute to Queen Elizabeth II. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
